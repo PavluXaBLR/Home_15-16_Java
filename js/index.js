@@ -109,12 +109,29 @@ for (let key in book) {
 
 //8
 
-function trainLength(totalLocomotive, totalFreightCar, totalCoachCar) {
-    let locomotiveLength = 25;
-    let freightCarLength = 30;
-    let coachLength = 20;
-    let length;
-    length = (locomotiveLength * totalLocomotive) + (freightCarLength * totalFreightCar) + (coachLength * totalCoachCar);
-    return length;
+let train = {
+	isLocomotive : true,
+	locomotiveLength  : 25,
+	locomotiveColor  : black,
+	isFreightCar  : false,
+	freightСarLength  : 30,
+	isCoachCar  : true,
+	totalCoachCars : 9,
+	coachLength  : 20,
+};
+
+function trainLength (totalLocomotive, totalFreightCar, totalCoachCar) {
+	let locomotiveLength = 25;
+	let freightCarLength = 30;
+	let coachLength = 20;
+	let length;
+	length = (locomotiveLength * totalLocomotive) + (freightCarLength * totalFreightCar) + (coachLength * totalCoachCar);
+	return length;
 }
 console.log(trainLength ( 1, 0, 9));
+
+//проверка на наличие вагона
+
+if (train.isFreightCar) {
+	console.log(train.isFreightCar);
+}
