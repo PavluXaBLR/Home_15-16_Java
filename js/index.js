@@ -135,3 +135,7 @@ console.log(trainLength ( 1, 0, 9));
 if (train.isFreightCar) {
 	console.log(train.isFreightCar);
 }
+
+if ('isFreightCar' in train) {
+	console.log (train.isFreightCar);
+}
